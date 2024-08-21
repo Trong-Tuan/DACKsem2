@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tweety</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="images/1_logo mascot@10x.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/main-detail.css">
+  <script src="https://kit.fontawesome.com/43de1c04bd.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="  position: fixed; /* Đặt vị trí cố định so với cửa sổ trình duyệt */
+  top: 0; /* Đặt header ở phần trên cùng */
+  width: 100%; /* Đảm bảo header chiếm toàn bộ chiều rộng của cửa sổ trình duyệt */
+  z-index: 1000; /* Đặt z-index cao để đảm bảo header nằm trên các phần tử khác */
+  background-color: #EAE5FC; /* Màu nền của header */
+  font-weight: bold; padding-bottom: 12px;">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="images/1_logo mascot@10x.png" alt="Logo" style="width: 50px; height: 50px;"></a>
+        <a class="navbar-brand" href="#" style="color: #fff;"><img src="images/2_brand name@10x.png" alt="brandname" style="max-width: 115px;width: 100%; height: auto;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="padding-left: 80px; padding-right: 35px;"> <a class="nav-link active" aria-current="page" href="About us.html" style="color: #8045D9;">Giới Thiệu</a> </li>
+              <li class="nav-item" style=" padding-right: 35px;"> <a class="nav-link active" aria-current="page" href="index.html" style="color: #8045D9;">Trang chủ</a> </li>
+              <li class="nav-item" style=" padding-right: 35px;"> <a class="nav-link active" aria-current="page" href="Contact.html" style="color: #8045D9;">Liên hệ</a> </li>
+            </ul>
+            <div class="search-buttons-container">
+              <!-- New button for avatar, name, and arrow down -->
+              <div class="noti-icon">
+                  <i class="fa fa-bell-o fa-xl" style="color: #8045D9;"></i>
+              </div>
+              <div class="profile-dropdown-container">
+                  <button class="profile-button">
+                      <img src="images/1_logo mascot@10x.png" alt="Avatar" class="avatar-img">
+                      <span class="profile-name">Trọng Tuấn</span>
+                      <div class="arrow-down">
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </div>
+                  </button>
+                  <div class="profile-dropdown">
+                      <button class="logout-button" id="logout-button">Đăng xuất</button>
+                  </div>
+              </div>
+              <button class="signin-button" id="language-button">
+                  <i class="fa-solid fa-globe" style="color: #7f45db;"></i>
+              </button>
+              <div class="language-dropdown" id="language-dropdown">
+                  <a href="#" id="vietnamese">Tiếng Việt</a>
+                  <a href="#" id="english">English</a>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</nav>
+
+<div id="floating-columns">
+  <div class="column column-1">
+    <video controls class="video-top">
+      <source src="images/Video Udemy-1.m4v" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="course-description">
+    <p style="font-size: 24px; font-weight: bold;">KHÓA HỌC NÀY BAO GỒM</p>
+    <ul>
+      <li><i class="fas fa-video"></i> 7 giờ video theo yêu cầu</li>
+      <li><i class="fas fa fa-mobile"></i> Truy cập trên thiết bị di động và TV</li>
+      <li><i class="fas fa-infinity"></i> Quyền truy cập đầy đủ suốt đời</li>
+      <li><i class="fas fa-trophy"></i> Giấy chứng nhận hoàn thành</li>
+    </ul>
+    </div>
+  <!-- Accordion Container -->
+<!-- Accordion Container -->
+    <div class="accordion mt-4" id="courseAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Nội dung khóa học
+        </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#courseAccordion">
+        <div class="accordion-body">
+        <!-- List of videos goes here -->
+        <ul class="list-unstyled">
+          <!-- Example Video Item -->
+          <li class="d-flex align-items-center mb-3">
+
+          </li>
+          <!-- Repeat for each video -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="course-description">
+  <p class="requirement-title" style="font-size: 24px; font-weight: bold;">YÊU CẦU: </p>
+  <ul>
+    <li>- Truy cập vào Adobe Photoshop, Illustrator & InDesign (Hoặc Affinity Designer, Affinity Photo, Affinity Publisher như một lựa chọn thay thế). Tôi sẽ sử dụng các phiên bản Adobe Creative Cloud, nhưng những người dùng phiên bản cũ hơn vẫn có thể tận dụng được nhiều lợi ích từ lớp học này. Những người muốn tham gia khóa học với các sản phẩm Affinity sẽ thấy một số công cụ và tên gọi khác nhau nên Adobe được ưu tiên hơn.</li>
+    <li>- Nếu bạn sử dụng các sản phẩm của Adobe, tôi thực sự khuyên bạn nên sử dụng phiên bản CS6 trở lên để có trải nghiệm mượt mà hơn với khóa học, nhưng không phải là yêu cầu bắt buộc.Không bao gồm phần mềm</li>
+
+  </ul>
+</div>
+<!-- Course Description Section -->
+<div id="course-description-section" class="course-description-section">
+  <div class="container">
+      <h2 style="font-size: 24px; font-weight: bold;">MÔ TẢ KHÓA HỌC</h2>
+      <div class="course-description-wrapper">
+          <p id="course-description" class="course-description-text">
+              <!-- Initial 14 lines of text -->
+           Lớp học chuyên sâu về thiết kế đồ họa - Học thiết kế TUYỆT VỜI
+
+Bạn có muốn học tất cả các kỹ năng và kỹ thuật cần thiết để tạo ra những thiết kế tuyệt vời không?
+
+Bạn có muốn biết quy trình tạo logo và gói thương hiệu không?
+
+Bạn có thấy ngại khi học photoshop, illustrator hoặc InDesign và muốn học thông qua các dự án thực tế không? Vậy thì lớp học này chính là dành cho bạn!
+
+Chúng ta sẽ xem xét kỹ lưỡng về Kiểu chữ, lý thuyết màu sắc, bố cục và thành phần, cách sử dụng ảnh trong thiết kế, thao tác và chỉnh sửa ảnh, thiết kế bố cục tạp chí, xây dựng thương hiệu và thiết kế logo, chỉ kể tên một vài ví dụ.
+
+Chúng ta cũng học những điều cơ bản về Adobe Photoshop, illustrator và InDesign và thực hiện các dự án với các ứng dụng thực tế. Mọi nhà thiết kế đều cần biết và thành thạo các chương trình này và khóa học này đảm bảo bạn biết các công cụ thiết yếu để thực hiện các dự án tuyệt vời.
+
+Trong Adobe Photoshop, chúng ta sẽ xem xét các kỹ thuật chỉnh sửa và thao tác ảnh như cách cắt đối tượng, hiệu ứng hai tông màu, thay đổi màu trên đối tượng, công cụ làm lỏng và chúng ta sẽ tạo hình thu nhỏ hấp dẫn trên YouTube bằng các kỹ năng photoshop mới học của mình cũng như toàn bộ dự án thiết kế bìa sách.Chúng ta sẽ nói về những điều cơ bản về thương hiệu, điều gì tạo nên một logo tốt? Làm thế nào để bạn mở rộng logo hoặc thương hiệu của mình sang các tài liệu tiếp thị khác?
+
+Tôi đã thiết kế khóa học mở rộng này đủ nhẹ nhàng để người mới bắt đầu có thể thiết kế nhưng đủ chi tiết để mọi người đều có thể HẾT MỨC từ khóa học này.
+
+Khóa học nhỏ mới đã được thêm vào!
+Khám phá ngách thiết kế của bạn!
+
+Bạn có muốn tìm hiểu xem mình nên tập trung vào ngách thiết kế nào không? Đây là một lớp học nhỏ mang tính khám phá được thêm vào khóa học Graphic Design Masterclass trên Udemy (Phần 15) giúp bạn tìm ra trọng tâm tiếp theo và khám phá nhiều lựa chọn tuyệt vời cho các nhà thiết kế mới vào nghề và đã thành danh.
+
+Chúng ta sẽ xem xét một số danh mục thiết kế cốt lõi chính và nói về các loại dự án bạn sẽ thực hiện cũng như những gì bạn cần học để tham gia vào các ngách thiết kế đó.
+
+Luôn có nhiều ngách hơn để khám phá nhưng chúng ta sẽ tập trung vào những điều sau trong lớp học nhỏ này:
+
+Thiết kế logo
+Thiết kế in ấn và biên tập
+Thiết kế và minh họa mẫu
+Thiết kế bao bì
+Thiết kế thương hiệu
+Thiết kế UX/UI
+Thiết kế đồ họa kỹ thuật số/truyền thông xã hội
+
+Đến cuối lớp học này, bạn sẽ nắm vững những gì mà mỗi ngách thiết kế đòi hỏi. Bạn sẽ tự tin khi chọn ba ngách trọng tâm hàng đầu để khởi động hoặc nâng cao các dịch vụ thiết kế của mình và biết những gì cần học tiếp theo.
+
+          </p>
+          <div class="description-overlay"></div>
+      </div>
+      <button id="toggle-description" class="toggle-description-button">See More</button>
+  </div>
+</div>
+
+<!-- Instructor Section -->
+<div class="instructor-section">
+  <!-- Title -->
+  <h2 style="font-size: 24px; margin-bottom: 10px; font-weight: bold;">GIẢNG VIÊN</h2>
+  
+  <!-- Institution and Position -->
+  <p id="institution-name">Tên Đơn Vị</p>
+  <p id="instructor-position">Vị trí của Giảng Viên</p>
+  
+  <!-- Additional Information -->
+  <div class="instructor-info">
+      <!-- Column 1: Avatar -->
+      <div class="instructor-avatar">
+          <img src="images/1_logo mascot@10x.png" alt="Instructor Avatar" style="width: 100px; height: 100px; border-radius: 50%;">
+      </div>
+      
+      <!-- Column 2: Additional Info -->
+      <div class="instructor-details">
+          <ul>
+              <li><i class="fa fa-star"></i> Awarded</li>
+              <li><i class="fa fa-medal"></i> Medal</li>
+              <li><i class="fa fa-users"></i> Expert</li>
+              <li><i class="fa fa-play-circle"></i> Courses</li>
+          </ul>
+      </div>
+  </div>
+  
+  <!-- Instructor Description -->
+  <div class="instructor-description">
+      <p id="instructor-description-text" class="collapsed">              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod felis nec malesuada gravida. Integer nec diam a nisi auctor interdum. Sed tincidunt velit vitae est dignissim, sed efficitur augue ullamcorper. Sed eget risus sit amet libero auctor posuere. Phasellus sagittis dui at nunc condimentum, nec hendrerit nisi convallis. Mauris scelerisque libero vitae varius suscipit. Ut id orci at velit scelerisque gravida a non ligula. Nam malesuada, odio at cursus dictum, eros lorem suscipit lorem, et feugiat sapien sem ac ipsum. Nulla facilisi. Fusce nec blandit lorem. Ut id magna vitae orci gravida dictum eu sed dui. Nulla eu lectus sit amet turpis faucibus feugiat. Mauris faucibus metus eget lorem consequat, non sagittis lectus dictum.              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod felis nec malesuada gravida. Integer nec diam a nisi auctor interdum. Sed tincidunt velit vitae est dignissim, sed efficitur augue ullamcorper. Sed eget risus sit amet libero auctor posuere. Phasellus sagittis dui at nunc condimentum, nec hendrerit nisi convallis. Mauris scelerisque libero vitae varius suscipit. Ut id orci at velit scelerisque gravida a non ligula. Nam malesuada, odio at cursus dictum, eros lorem suscipit lorem, et feugiat sapien sem ac ipsum. Nulla facilisi. Fusce nec blandit lorem. Ut id magna vitae orci gravida dictum eu sed dui. Nulla eu lectus sit amet turpis faucibus feugiat. Mauris faucibus metus eget lorem consequat, non sagittis lectus dictum.
+      </p>
+      <button id="toggle-description-2" class="see-more-btn">See More</button>
+  </div>
+
+<section class="review-section">
+    <div id="reviews-container" class="review-grid">
+        <!-- Review items will be rendered here -->
+    </div>
+    <button id="toggle-button" class="see-more-button">Xem thêm</button>
+</section>
+
+<!-- Courses Section -->
+<section class="courses-section">
+  <h2 class="section-title" style="font-size: 24px; font-weight: bold;">CÁC KHÓA HỌC LIÊN QUAN</h2>
+  <div class="courses-container">
+    <div class="course-item">
+      <img src="images/9_42dadbfe747110c544fab569d954869c - Copy.jpg" alt="Course Image 1" class="course-image">
+      <div class="course-details">
+        <h3 class="course-title">Figma's so easy!!!</h3>
+        <p class="course-provider">Provider Name 1</p>
+        <div class="course-rating">
+          <span class="rating-value">5.0</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <span class="rating-amount">(100)</span>
+        </div>
+        <p class="course-info">
+          <span>10.5 giờ</span> • 
+          <span>50 bài giảng</span> • 
+          <span>Sơ cấp</span>
+        </p>
+        <p class="course-price">đ 499.000</p>
+      </div>
+    </div>
+    <!-- Repeat for other courses -->
+    <div class="course-item">
+      <img src="images/1_40700a05fd8f4008c07a7d9d9675b2f4 - Copy.jpg" alt="Course Image 2" class="course-image">
+      <div class="course-details">
+        <h3 class="course-title">Master Art</h3>
+        <p class="course-provider">Provider Name 2</p>
+        <div class="course-rating">
+          <span class="rating-value">4.5</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <span class="rating-amount">(80)</span>
+        </div>
+        <p class="course-info">
+          <span>8.0 giờ</span> • 
+          <span>30 bài giảng</span> • 
+          <span>Trung cấp</span>
+        </p>
+        <p class="course-price">đ 299.000</p>
+      </div>
+    </div>
+    <div class="course-item">
+      <img src="images/4_6c4a4208456e463a605265c9149d0a83 - Copy.jpg" alt="Course Image 3" class="course-image">
+      <div class="course-details">
+        <h3 class="course-title">Graphic Design in 1 month!!!</h3>
+        <p class="course-provider">Provider Name 3</p>
+        <div class="course-rating">
+          <span class="rating-value">4.0</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+          </div>
+          <span class="rating-amount">(60)</span>
+        </div>
+        <p class="course-info">
+          <span>12.0 giờ</span>• 
+          <span> 40 bài giảng</span>• 
+          <span> Tất cả trình độ</span>
+        </p>
+        <p class="course-price">đ 399.000</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+
+  </div>
+  <div class="column column-2" style="height: fit-content;">
+<!-- Column 2 -->
+<div class="course-details-column">
+  <!-- Course Title -->
+  <h1 class="course-title" style="font-size: 32px; font-weight: bold;">Graphic Design Masterclass - Learn GREAT Design</h1>
+
+  <!-- Short Description -->
+  <p class="course-short-description" style="font-size: 24px;">The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design</p>
+
+  <!-- Created By -->
+  <p class="course-created-by">Được tạo bởi: Tên Đơn Vị</p>
+
+  <!-- Last Updated -->
+  <p class="course-last-updated">
+      <i class="fa fa-info-circle info-icon"></i> Cập nhật lần cuối: 08/2024
+  </p>
+
+  <!-- Language -->
+  <p class="course-language">
+      <i class="fa fa-globe global-icon"></i> Ngôn ngữ: Tiếng Anh
+  </p>
+
+  <!-- Pricing -->
+  <div class="course-pricing">
+      <span class="course-sell-price">399.000đ</span>
+      <span class="course-root-price">499.000đ</span>
+      <span class="course-discount">-20%</span>
+      <span class="course-rating">
+          <i class="fa fa-star star-icon"></i> 4,9 (261)
+      </span>
+  </div>
+
+  <!-- Add to Cart / Buy Now -->
+  <div class="course-action-buttons">
+      <button class="add-to-cart-button">Thêm vào giỏ hàng</button>
+      <button class="buy-now-button">Mua khóa học</button>
+  </div>
+
+  <!-- Coupon Input -->
+  <div class="course-coupon-container">
+      <input type="text" class="coupon-input" placeholder="Nhập mã coupon">
+      <button class="apply-coupon-button">Áp dụng</button>
+  </div>
+</div>
+  </div>
+</div>
+
+<!-- Banner Header -->
+<div id="bannerheader">
+  <div class="search-container">
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle" id="categoryDropdown">Thể Loại</a>
+      <div class="dropdown-menu" id="categoryDropdownMenu">
+        <a class="dropdown-item" href="#" data-title="NHIẾP ẢNH">Nhiếp ảnh</a>
+        <a class="dropdown-item" href="#" data-title="ÂM NHẠC">Âm nhạc</a>
+        <a class="dropdown-item" href="#" data-title="HỘI HỌA">Hội họa</a>
+        <a class="dropdown-item" href="#" data-title="FILM MAKING">Film Making</a>
+        <a class="dropdown-item" href="#" data-title="THIẾT KẾ">Thiết kế</a>
+        <a class="dropdown-item" href="#" data-title="ĐIÊU KHẮC">Điêu khắc</a>
+        <a class="dropdown-item" href="#" data-title="VŨ CÔNG">Vũ công</a>
+        <a class="dropdown-item" href="#" data-title="CẮM HOA">Cắm hoa</a>
+        <a class="dropdown-item" href="#" data-title="TỈA RAU CỦ">Tỉa rau củ</a>
+      </div>
+    </div>
+    
+    <div class="divider" style="color: #753AC7;"></div>
+    <input type="text" class="search-input" placeholder="Tìm kiếm...">
+    <button class="search-button">Tìm kiếm</button>
+  </div>
+</div>
+
+<div class="body-section" style="background-color: #fff; width: 1200px; height: 4000px;">
+
+</div>
+
+<div id="infoSection" style="background-color: #EAE5FC; padding: 30px 0;">
+  <div class="container">
+    <div class="row">
+      <!-- Cột thứ nhất -->
+      <div class="col-lg-5 col-md-12 mb-4" style="padding-right: 30px;">
+        <div class="d-flex flex-column align-items-start">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/1_logo mascot@10x.png" alt="Image 1" style="width: 40px; height: 40px; margin-right: 10px;">
+            <img src="images/2_brand name@10x.png" alt="Image 2" style="">
+          </div>
+          <p style="margin-bottom: 15px;">Tweety là một ứng dụng di động giúp người dùng tìm kiếm và đăng ký các lớp học nghệ thuật. Ứng dụng cung cấp một nền tảng thuận tiện cho người yêu nghệ thuật để khám phá, học hỏi và tham gia vào các khoá học hoạt động nghệ thuật. Là mạng xã hội, nơi các tính đồ nghệ thuật giao lưu kết bạn và học hỏi nhau</p>
+          <div>
+            <a href="#" class="btn btn-primary me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-primary"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột thứ hai -->
+      <div class="col-lg-3 col-md-6 mb-6" style="padding-top: 20px; font-style: Lexend Deca;">
+        <h4 style="font-weight: bold;">THÔNG TIN</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tải ứng dụng</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột thứ ba -->
+      <div class="col-lg-3 col-md-6 mb-4" style="padding-top: 20px;">
+        <h4 style="font-weight: bold;">HỖ TRỢ</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách về quyền riêng tư</a></li>
+          <li><a href="#">Hướng dẫn thanh toán</a></li>
+          <li><a href="#">Trung tâm trợ giúp</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer" style="background-color: #fff; padding: 20px 0; width: 100%;">
+  <div class="container">
+    <p style="color: #8045D9; margin: 0; font-weight: bold;">Copyright Learn. 2024. All Right Reserved</p>
+  </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i> <!-- Sử dụng Font Awesome cho biểu tượng mũi tên -->
+</button>
+
+
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMN3K2gOhvvKzx54+jW/N0nNq2vnhBoWn+4DsvIbTW4l2gfzZmtx/q8QtsJ16d6E" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-c6PbFHG8L7Mb6a5k1a6eBOJgaDh81jRAYVjXGd2tbSRyb/AW5AtZ5FzmcT6+eEYg" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+</body>
+<script>
+ const videos = [
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  { title: "Video 1 Title", duration: "00:00" },
+  { title: "Video 2 Title", duration: "00:00" },
+  // Add more video items here
+];
+
+const videoList = document.querySelector('.accordion-body ul');
+
+videos.forEach(video => {
+  const listItem = document.createElement('li');
+  listItem.className = 'd-flex align-items-center mb-3';
+
+  listItem.innerHTML = `
+    <i class="fas fa-video me-2"></i>
+    <span class="flex-grow-1">${video.title}</span>
+    <span>${video.duration}</span>
+  `;
+
+  videoList.appendChild(listItem);
+});
+
+// Show dropdown on hover
+document.getElementById('language-button').addEventListener('mouseover', function() {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định
+  var dropdown = this.nextElementSibling;
+    var dropdown = document.getElementById('language-dropdown');
+    dropdown.style.display = 'flex';
+});
+
+// Hide dropdown when the mouse leaves the dropdown area
+document.getElementById('language-dropdown').addEventListener('mouseleave', function() {
+    var dropdown = document.getElementById('language-dropdown');
+    dropdown.style.display = 'none';
+});
+
+document.getElementById('categoryDropdown').addEventListener('click', function(event) {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định
+  var dropdownMenu = this.nextElementSibling;
+  var dropdownMenu = document.getElementById('categoryDropdownMenu');
+  if (dropdownMenu.style.display === 'block') {
+    dropdownMenu.style.display = 'none';
+  } else {
+    dropdownMenu.style.display = 'block';
+  }
+});
+
+// Hide the dropdown if clicking outside
+document.addEventListener('click', function(event) {
+    var dropdownMenu = document.getElementById('categoryDropdownMenu');
+    var dropdownButton = document.getElementById('categoryDropdown');
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+  
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("toggle-description");
+    const descriptionWrapper = document.querySelector(".course-description-section");
+    const descriptionText = document.getElementById("course-description");
+
+    toggleButton.addEventListener("click", function() {
+        if (descriptionWrapper.classList.contains("show-full-description")) {
+            // Collapse the description
+            descriptionWrapper.classList.remove("show-full-description");
+            toggleButton.textContent = "See More";
+        } else {
+            // Expand the description
+            descriptionWrapper.classList.add("show-full-description");
+            toggleButton.textContent = "See Less";
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggle-description-2');
+    const descriptionText = document.getElementById('instructor-description-text');
+    
+    toggleButton.addEventListener('click', function() {
+        if (descriptionText.classList.contains('collapsed')) {
+            descriptionText.classList.remove('collapsed');
+            descriptionText.classList.add('expanded');
+            toggleButton.textContent = 'See Less';
+        } else {
+            descriptionText.classList.remove('expanded');
+            descriptionText.classList.add('collapsed');
+            toggleButton.textContent = 'See More';
+        }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const profileButton = document.querySelector('.profile-button');
+    const profileDropdownContainer = document.querySelector('.profile-dropdown-container');
+
+    profileButton.addEventListener('click', () => {
+        profileDropdownContainer.classList.toggle('show');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (event) => {
+        if (!profileDropdownContainer.contains(event.target)) {
+            profileDropdownContainer.classList.remove('show');
+        }
+    });
+});
+
+document.getElementById('logout-button').addEventListener('click', function() {
+    window.location.href = 'main.html'; // Thay đổi URL đến trang mới
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Lấy tất cả các mục trong dropdown menu
+  var dropdownItems = document.querySelectorAll('#categoryDropdownMenu .dropdown-item');
+  
+  // Lấy tiêu đề của carousel
+  var categoryDropdown = document.getElementById('categoryDropdown')
+  
+  // Tiêu đề mặc định
+  var defaultTitle = 'KHÓA HỌC NỔI BẬT';
+  
+  // Thêm sự kiện click cho từng mục trong dropdown menu
+  dropdownItems.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      event.preventDefault(); // Ngăn không cho link chuyển hướng
+      var category = item.getAttribute('data-title'); // Lấy tiêu đề từ thuộc tính data-title
+      categoryDropdown.textContent = category; // Cập nhật tiêu đề carousel
+    });
+  });
+
+  // Đặt tiêu đề mặc định khi trang tải
+  carouselTitle.textContent = defaultTitle;
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
+  // Hiển thị nút khi cuộn xuống 200px và ẩn khi ở đầu trang
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  // Cuộn lên đầu trang khi nhấp vào nút
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Cuộn mượt mà
+    });
+  });
+});
+
+document.addEventListener('scroll', function() {
+  const column2 = document.querySelector('.column-2');
+  const scrollPosition = window.scrollY;
+  const column2Height = column2.offsetHeight;
+
+  console.log(scrollPosition)
+
+  // Kiểm tra nếu người dùng đã cuộn qua 1/2 chiều cao của column-2
+  if (scrollPosition > column2Height / 2) {
+    column2.style.top = `${scrollPosition - 170}px`; // Di chuyển column-2 theo vị trí cuộn
+  } else {
+    column2.style.top = '0%'; // Vị trí mặc định
+  }
+});
+
+// Sample data array
+// Sample data array
+const reviews = [
+    {
+        avatar: 'images/1_logo mascot@10x.png',
+        name: 'Người Đánh Giá 1',
+        rating: 4,
+        timeAgo: '5 ngày trước',
+        content: 'Nội dung đánh giá của người dùng 1...',
+    },
+    {
+      avatar: 'images/1_logo mascot@10x.png',
+      name: 'Người Đánh Giá 2',
+        rating: 3,
+        timeAgo: '2 tuần trước',
+        content: 'Nội dung đánh giá của người dùng 2...',
+    },
+    {
+      avatar: 'images/1_logo mascot@10x.png',
+      name: 'Người Đánh Giá 3',
+        rating: 5,
+        timeAgo: '1 tháng trước',
+        content: 'Nội dung đánh giá của người dùng 3...',
+    },
+    {
+      avatar: 'images/1_logo mascot@10x.png',
+      name: 'Người Đánh Giá 4',
+        rating: 2,
+        timeAgo: '3 tuần trước',
+        content: 'Nội dung đánh giá của người dùng 4...',
+    },
+    {
+      avatar: 'images/1_logo mascot@10x.png',
+      name: 'Người Đánh Giá 5',
+        rating: 2,
+        timeAgo: '3 tuần trước',
+        content: 'Nội dung đánh giá của người dùng 5...',
+    },
+    {
+      avatar: 'images/1_logo mascot@10x.png',
+      name: 'Người Đánh Giá 6',
+        rating: 2,
+        timeAgo: '3 tuần trước',
+        content: 'Nội dung đánh giá của người dùng 6...',
+    },
+    // Add more review objects here
+];
+
+// Function to render reviews
+function renderReviews(reviewsToShow) {
+    const container = document.getElementById('reviews-container');
+    container.innerHTML = '';
+
+    reviewsToShow.forEach(review => {
+        const item = document.createElement('div');
+        item.className = 'review-item';
+
+        item.innerHTML = `
+            <div class="top-row">
+                <img src="${review.avatar}" class="avatar" alt="Avatar">
+                <div class="review-details">
+                    <div class="name-rating-time">
+                        <strong>${review.name}</strong>
+                        <div class="stars">
+                            ${Array.from({ length: 5 }, (_, i) => 
+                                `<i class="fa${i < review.rating ? ' fa-star' : ' fa-star-o'}"></i>`
+                            ).join('')}
+                        </div>
+                        <div class="time">${review.timeAgo}</div>
+                    </div>
+                </div>
+                <div class="more-icon">
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="bottom-row">${review.content}</div>
+        `;
+
+        container.appendChild(item);
+    });
+}
+
+// Initial render with first 2 items
+const initialReviews = reviews.slice(0, 4); // Adjust as needed
+renderReviews(initialReviews);
+
+// Handle "See More/See Less" button click
+let isExpanded = false;
+const toggleButton = document.getElementById('toggle-button');
+
+toggleButton.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+    
+    if (isExpanded) {
+        // Show all reviews
+        renderReviews(reviews);
+        toggleButton.textContent = 'Thu gọn';
+    } else {
+        // Show only initial reviews
+        renderReviews(initialReviews);
+        toggleButton.textContent = 'Xem thêm';
+    }
+});
+
+
+</script>
+</html>

@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tweety</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="icon" href="images/1_logo mascot@10x.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/main-signed.css">
+  <script src="https://kit.fontawesome.com/43de1c04bd.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <!-- <div class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fas fa-home"></i><span>Tải ứng dụng</span></a></li>
+      <li><a href="#"><i class="fas fa-book"></i><span>Khóa học của tôi</span></a></li>
+      <li><a href="#"><i class="fas fa-users"></i><span>Cộng đồng</span></a></li>
+      <li><a href="#"><i class="fas fa-phone"></i><span>Liên hệ</span></a></li>
+      <li><a href="#"><i class="fas fa-briefcase"></i><span>Nhà đầu tư</span></a></li>
+      <li><a href="#"><i class="fas fa-link"></i><span>Đơn vị liên kết</span></a></li>
+      <li><a href="#"><i class="fas fa-question-circle"></i><span>Trợ giúp và hỗ trợ</span></a></li>
+      <li><a href="#"><i class="fas fa-shield-alt"></i><span>Chính sách về quyền riêng tư</span></a></li>
+      <li><a href="#"><i class="fas fa-file-contract"></i><span>Điều khoản</span></a></li>
+    </ul>
+  </div> -->
+
+  <!-- Hover area -->
+  <div class="sidebar-hover"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #EAE5FC; font-weight: bold;">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="images/1_logo mascot@10x.png" alt="Logo" style="width: 50px; height: 50px;"></a>
+        <a class="navbar-brand" href="#" style="color: #fff;"><img src="images/2_brand name@10x.png" alt="brandname" style="max-width: 115px;width: 100%; height: auto;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="padding-left: 80px; padding-right: 35px;"> <a class="nav-link active" aria-current="page" href="About us.html">Giới Thiệu</a> </li>
+              <li class="nav-item" style=" padding-right: 35px;"> <a class="nav-link active" aria-current="page" href="index.html">Trang chủ</a> </li>
+              <li class="nav-item" style=" padding-right: 35px;"> <a class="nav-link active" aria-current="page" href="Contact.html">Liên hệ</a> </li>
+            </ul>
+            <div class="search-buttons-container">
+              <!-- New button for avatar, name, and arrow down -->
+              <div class="noti-icon">
+                  <i class="fa fa-bell-o fa-xl" style="color: #8045D9;"></i>
+              </div>
+              <div class="profile-dropdown-container">
+                  <button class="profile-button">
+                      <img src="images/1_logo mascot@10x.png" alt="Avatar" class="avatar-img">
+                      <span class="profile-name">Trọng Tuấn</span>
+                      <div class="arrow-down">
+                          <i class="fa-solid fa-chevron-down"></i>
+                      </div>
+                  </button>
+                  <div class="profile-dropdown">
+                      <button class="logout-button" id="logout-button">Đăng xuất</button>
+                  </div>
+              </div>
+              <button class="signin-button" id="language-button">
+                  <i class="fa-solid fa-globe" style="color: #7f45db;"></i>
+              </button>
+              <div class="language-dropdown" id="language-dropdown">
+                  <a href="#" id="vietnamese">Tiếng Việt</a>
+                  <a href="#" id="english">English</a>
+              </div>
+          </div>
+          
+        </div>
+    </div>
+</nav>
+
+
+<!-- Banner Header -->
+<div id="bannerheader">
+  <div class="banner-content">
+    <div class="text-column">
+      <h1>WELCOME TO</h1>
+      <img class="brand-column" src="images/2_brand name@10x.png" />
+      <p>Cung cấp hơn 30.000 khóa học về nhiều chủ đề sáng tạo khác nhau, bao gồm thiết kế đồ họa, nhiếp ảnh, vẽ tranh, minh họa, làm phim, âm nhạc, viết lách, v.v. Với số lượng lớn khóa học đa dạng, bạn có thể dễ dàng tìm thấy khóa học phù hợp với sở thích và trình độ của bản thân.
+      </p>
+      <p class="text-luck">Chúc bạn tìm được khoá học ưng ý nhé!
+      </p>
+    </div>
+    <div class="image-column">
+      <img src="images/3_background@10x.png" alt="Banner Image">
+    </div>
+  </div>
+  <div class="search-container">
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle" id="categoryDropdown">Thể Loại</a>
+      <div class="dropdown-menu" id="categoryDropdownMenu">
+        <a class="dropdown-item" href="#" data-title="NHIẾP ẢNH">Nhiếp ảnh</a>
+        <a class="dropdown-item" href="#" data-title="ÂM NHẠC">Âm nhạc</a>
+        <a class="dropdown-item" href="#" data-title="HỘI HỌA">Hội họa</a>
+        <a class="dropdown-item" href="#" data-title="FILM MAKING">Film Making</a>
+        <a class="dropdown-item" href="#" data-title="THIẾT KẾ">Thiết kế</a>
+        <a class="dropdown-item" href="#" data-title="ĐIÊU KHẮC">Điêu khắc</a>
+        <a class="dropdown-item" href="#" data-title="VŨ CÔNG">Vũ công</a>
+        <a class="dropdown-item" href="#" data-title="CẮM HOA">Cắm hoa</a>
+        <a class="dropdown-item" href="#" data-title="TỈA RAU CỦ">Tỉa rau củ</a>
+      </div>
+    </div>
+    
+    <div class="divider" style="color: #753AC7;"></div>
+    <input type="text" class="search-input" placeholder="Tìm kiếm...">
+    <button class="search-button">Tìm kiếm</button>
+  </div>
+</div>
+
+
+
+  <div class="carousel-wrapper">
+    <h2 class="carousel-title" id="carouselTitle">KHÓA HỌC NỔI BẬT</h2>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="fa-solid fa-chevron-left" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <div id="carouselExampleControls" class="carousel slide">
+      <div class="carousel-inner" id="carouselInner">
+        <!-- Slides will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="carousel-wrapper">
+    <h3 class="carousel-title" id="carouselTitleRcm">KHÓA HỌC ĐỀ XUẤT</h3>
+
+    <button class="carousel-control-prev" type="button" onclick="prevSlide('carouselRcmInner')">
+      <span class="fa-solid fa-chevron-left" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>    
+    </button>
+
+    <div id="carouselExampleControls" class="carousel slide">
+      <div id="carouselRcmInner" class="carousel-inner">
+        <!-- Second Carousel Items Will Be Injected Here -->
+      </div>
+    </div>
+
+    <button class="carousel-control-next" type="button" onclick="nextSlide('carouselRcmInner')">
+      <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>    
+    </button>
+  </div>
+
+  
+<!-- Previous Carousels -->
+
+<div class="grid-wrapper">
+  <h3 class="grid-title">THỂ LOẠI NỔI BẬT</h3>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="images/4_nhiếp ảnh@10x.png" alt="Image 1">
+      <p class="grid-item-text">NHIẾP ẢNH</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/5_âm nhạc@10x.png" style="padding-top: 44px;" alt="Image 2">
+      <p class="grid-item-text">ÂM NHẠC</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/6_hội họa@10x.png" alt="Image 3">
+      <p class="grid-item-text">HỘI HỌA</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/7_film making@10x.png" alt="Image 4" style="padding-top: 58px;">
+      <p class="grid-item-text">FILM MAKING</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/8_thiết kế@10x.png" alt="Image 5" style="padding-top: 20px;">
+      <p class="grid-item-text">THIẾT KẾ</p>
+    </div>
+    <div class="grid-item">
+      <img src="images/9_tỉa rau củ@10x.png" alt="Image 6">
+      <p class="grid-item-text">TỈA RAU CỦ</p>
+    </div>
+  </div>
+</div>
+
+<div id="aboutUs">
+  <div class="about-us-content">
+    <div class="about-us-left">
+      <h3 class="about-us-title">VỀ CHÚNG TÔI</h3>
+      <img src="images/1_logo mascot@10x.png" alt="Left Column Image">
+    </div>
+    <div class="about-us-right">
+      <p class="about-us-text">Về chúng tôi</p>
+      <p class="about-us-subtext">Cung cấp hơn 30.000 khóa học về nhiều chủ đề sáng tạo khác nhau, bao gồm thiết kế đồ họa, nhiếp ảnh, vẽ tranh, minh họa, làm phim, âm nhạc, viết lách, v.v. Với số lượng lớn khóa học đa dạng, bạn có thể dễ dàng tìm thấy khóa học phù hợp với sở thích và trình độ của bản thân.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="reviews">
+  <h3 class="review-title">ĐÁNH GIÁ</h3>
+  
+  <div class="reviews-container">
+    <div class="review-card">
+      <img src="https://picsum.photos/300" alt="Avatar 1" class="review-avatar">
+      <div class="review-content">
+        <div class="review-header">
+          <div class="review-name">Nguyễn Nhật Hạ</div>
+          <div class="review-rating">
+            <i class="fa fa-star"></i>
+            <span>4.5</span>
+          </div>
+        </div>
+        <div class="review-comment">App có nhiều khoá học bổ ích, giảng viên dạy dễ hiểu, hỗ trợ nhiệt tình khi không hiểu bài</div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="https://picsum.photos/300" alt="Avatar 2" class="review-avatar">
+      <div class="review-content">
+        <div class="review-header">
+          <div class="review-name">Đinh Thuỵ Vũ</div>
+          <div class="review-rating">
+            <i class="fa fa-star"></i>
+            <span>4.5</span>
+          </div>
+        </div>
+        <div class="review-comment">Lúc đầu mình có hơi lo ngại về việc học online sẽ không thể tiếp thu tốt, nhưng giáo viên dạy rất dễ hiểu và chương trình học rất đầy đủ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="suggestions">
+  <div class="suggestion-card">
+    <div class="suggestion-content">
+      <div class="suggestion-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="suggestion-text">
+        Tìm kiếm và đăng ký các khoá học nghệ thuật online
+      </div>
+    </div>
+  </div>
+
+  <div class="suggestion-card">
+    <div class="suggestion-content">
+      <div class="suggestion-icon">
+        <i class="fa fa-users"></i>
+      </div>
+      <div class="suggestion-text">
+        Học tập và sáng tạo cùng nhóm
+      </div>
+    </div>
+  </div>
+
+  <div class="suggestion-card">
+    <div class="suggestion-content">
+      <div class="suggestion-icon">
+        <i class="fa fa-calendar"></i>
+      </div>
+      <div class="suggestion-text">
+        Sắp xếp việc học và việc làm theo ý muốn
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="infoSection" style="background-color: #EAE5FC; padding: 30px 0;">
+  <div class="container">
+    <div class="row">
+      <!-- Cột thứ nhất -->
+      <div class="col-lg-5 col-md-12 mb-4" style="padding-right: 30px;">
+        <div class="d-flex flex-column align-items-start">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/1_logo mascot@10x.png" alt="Image 1" style="width: 40px; height: 40px; margin-right: 10px;">
+            <img src="images/2_brand name@10x.png" alt="Image 2" style="">
+          </div>
+          <p style="margin-bottom: 15px;">Tweety là một ứng dụng di động giúp người dùng tìm kiếm và đăng ký các lớp học nghệ thuật. Ứng dụng cung cấp một nền tảng thuận tiện cho người yêu nghệ thuật để khám phá, học hỏi và tham gia vào các khoá học hoạt động nghệ thuật. Là mạng xã hội, nơi các tính đồ nghệ thuật giao lưu kết bạn và học hỏi nhau</p>
+          <div>
+            <a href="#" class="btn btn-primary me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="btn btn-primary"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột thứ hai -->
+      <div class="col-lg-3 col-md-6 mb-6" style="padding-top: 20px; font-style: Lexend Deca;">
+        <h4 style="font-weight: bold;">THÔNG TIN</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Tải ứng dụng</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột thứ ba -->
+      <div class="col-lg-3 col-md-6 mb-4" style="padding-top: 20px;">
+        <h4 style="font-weight: bold;">HỖ TRỢ</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Chính sách về quyền riêng tư</a></li>
+          <li><a href="#">Hướng dẫn thanh toán</a></li>
+          <li><a href="#">Trung tâm trợ giúp</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer" style="background-color: #fff; padding: 20px 0; width: 100%;">
+  <div class="container">
+    <p style="color: #8045D9; margin: 0; font-weight: bold;">Copyright Learn. 2024. All Right Reserved</p>
+  </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i> <!-- Sử dụng Font Awesome cho biểu tượng mũi tên -->
+</button>
+
+
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMN3K2gOhvvKzx54+jW/N0nNq2vnhBoWn+4DsvIbTW4l2gfzZmtx/q8QtsJ16d6E" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-c6PbFHG8L7Mb6a5k1a6eBOJgaDh81jRAYVjXGd2tbSRyb/AW5AtZ5FzmcT6+eEYg" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+</body>
+<script>
+// Show dropdown on hover
+document.getElementById('language-button').addEventListener('mouseover', function() {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định
+  var dropdown = this.nextElementSibling;
+    var dropdown = document.getElementById('language-dropdown');
+    dropdown.style.display = 'flex';
+});
+
+// Hide dropdown when the mouse leaves the dropdown area
+document.getElementById('language-dropdown').addEventListener('mouseleave', function() {
+    var dropdown = document.getElementById('language-dropdown');
+    dropdown.style.display = 'none';
+});
+
+document.getElementById('categoryDropdown').addEventListener('click', function(event) {
+  event.preventDefault(); // Ngăn chặn hành vi mặc định
+  var dropdownMenu = this.nextElementSibling;
+  var dropdownMenu = document.getElementById('categoryDropdownMenu');
+  if (dropdownMenu.style.display === 'block') {
+    dropdownMenu.style.display = 'none';
+  } else {
+    dropdownMenu.style.display = 'block';
+  }
+});
+
+// Hide the dropdown if clicking outside
+document.addEventListener('click', function(event) {
+    var dropdownMenu = document.getElementById('categoryDropdownMenu');
+    var dropdownButton = document.getElementById('categoryDropdown');
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+    }
+});
+  
+
+let currentIndex = 0;
+
+  const products = [
+  {
+    image: 'images/1_Screenshot 2024-08-10 012446 - Copy.png',
+    name: 'Graphic Design Masterclass - Learn GREAT Design',
+    description: 'The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design',
+    sellPrice: 450000,
+    rootPrice: 500000,
+    discount: 10,
+    rating: '4,5',
+    amountRating: 150,
+  },
+  {
+    image: 'images/2_Graphic-designing - Copy.jpg',
+    name: 'Graphic design class: for beginners | Updated verson- Learn Graphic Design Skills Fast',
+    description: 'Learn Indesign, Illustratior, Photoshop, design theory and more in this practical 12 part graphic design crash course',
+    sellPrice: 400000,
+    rootPrice: 450000,
+    discount: 10,
+    rating: '4,6',
+    amountRating: 200,
+  },
+  {
+    image: 'images/3_Screenshot 2024-08-12 224623 - Copy.png',
+    name: 'Graphic Design Mastery- AI, Photoshop, Illustrator, Indesign',
+    description: 'Graphic Design for beginners including Graphic Design Theories, Photoshop, Illustrator, Indesign, AI & Creative Thinking',
+    sellPrice: 380000,
+    rootPrice: 420000,
+    discount: 10,
+    rating: '4,7',
+    amountRating: 180,
+  },
+  {
+    image: 'images/4_6c4a4208456e463a605265c9149d0a83 - Copy.jpg',
+    name: 'Graphic Design Masterclass: Design 40+ Projects in Photoshop',
+    description: 'Use Photoshop to create YT thumbnails, banners, catalogues, Instagram & Facebook Graphics, Cards, CV, Newsletters & more',
+    sellPrice: 470000,
+    rootPrice: 520000,
+    discount: 10,
+    rating: '4,8',
+    amountRating: 220,
+  },
+  {
+    image: 'images/5_Screenshot 2024-08-12 225351 - Copy.png',
+    name: 'Graphic Design Masterclass: Design 40+ Projects in Photoshop',
+    description: 'Icon Set Design, E-book cover, Digitizing Sketches, Social Media Design, Wordpress Web Design, Adobe Xd, GIFS and more!',
+    sellPrice: 460000,
+    rootPrice: 500000,
+    discount: 10,
+    rating: '4,6',
+    amountRating: 190,
+  },
+  {
+    image: 'images/6_01697a2c2b2f41e1d554349587a926c2 - Copy.jpg',
+    name: 'Graphic Design Mastery- AI, Photoshop, Illustrator, Indesign',
+    description: 'The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design',
+    sellPrice: 420000,
+    rootPrice: 470000,
+    discount: 10,
+    rating: '4,9',
+    amountRating: 250,
+  },
+  {
+    image: 'images/7_Graphic-Design-Services - Copy.jpeg',
+    name: 'Adobe Illustrator CC - Essentials Training Course',
+    description: 'Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth, practical, easy-to-follow course!',
+    sellPrice: 410000,
+    rootPrice: 460000,
+    discount: 10,
+    rating: '4,7',
+    amountRating: 230,
+  },
+  {
+    image: 'images/8_ 3196-690941664703139-1664703139 - Copy.png',
+    name: 'Figma UI UX Design Essentials',
+    description: 'Use Figma to get a job in UI Design, User Interface, User Experience design, UX Design & Web Design',
+    sellPrice: 450000,
+    rootPrice: 500000,
+    discount: 10,
+    rating: '4,8',
+    amountRating: 210,
+  },
+  {
+    image: 'images/9_42dadbfe747110c544fab569d954869c - Copy.jpg',
+    name: 'Adobe Illustrator CC – Advanced Training Course',
+    description: "In this Adobe Illustrator Advanced course we'll learn Advanced techniques for graphic design, logo design & illustration",
+    sellPrice: 430000,
+    rootPrice: 480000,
+    discount: 10,
+    rating: '4,6',
+    amountRating: 200,
+  }
+  // Add more products as needed
+];
+
+
+const productsRcm = [
+  {
+    image: 'images/1_40700a05fd8f4008c07a7d9d9675b2f4 - Copy.jpg',
+    name: 'Học vẽ cơ bản dành cho người mới. Khóa học từ kiến thức về bố cục cơ bản  vẽ cơ bản dành cho ',
+    author: 'Huy Nguyen',
+    rootPrice: 500000,
+    rating: '4,5',
+    amountRating: 150,
+  },
+  {
+    image: 'images/2_lanvđLk - Copy.png',
+    name: 'Adobe Illustrator CC: Essential Illustrator CC Training',
+    author: 'Hoang Phuc Hai',
+    rootPrice: 450000,
+    rating: '4,6',
+    amountRating: 200,
+  },
+  {
+    image: 'images/3_53b9eb4f4f841d3633596beb17ac2e66 - Copy.jpg',
+    name: 'Photoshop for beginners: From scratch to expert!',
+    author: 'Esther Howard',
+    rootPrice: 420000,
+    rating: '4,7',
+    amountRating: 180,
+  },
+  {
+    image: 'images/4_f0238739ae2d8a3d1d0c8e23effef132 - Copy.jpg',
+    name: 'Motion Design with Figma: Animations, Motion Graphics, UX/UI',
+    author: 'Andrei Neagoie',
+    rootPrice: 520000,
+    rating: '4,8',
+    amountRating: 220,
+  },
+  {
+    image: 'images/5_827f8c8170a5842d2560da75249117af - Copy.jpg',
+    name: 'Figma for Web Design & Freelancing: Master UI/UX',
+    author: 'Cristian Doru Barin',
+    rootPrice: 500000,
+    rating: '4,6',
+    amountRating: 190,
+  },
+  {
+    image: 'images/6_20e09a44-391e-4ada-890a-356f51d82f36 - Copy.jpg',
+    name: 'Graphic Design Mastery- AI, Photoshop, Illustrator, Indesign',
+    author: 'The Ultimate Graphic Design Course Which Covers Photoshop, Illustrator, InDesign, Design Theory, Branding, Logo Design',
+    rootPrice: 470000,
+    rating: '4,9',
+    amountRating: 250,
+  },
+  {
+    image: 'images/7_Graphic-Design-Services - Copy.jpeg',
+    name: 'Adobe Illustrator CC - Essentials Training Course',
+    author: 'Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth, practical, easy-to-follow course!',
+    rootPrice: 460000,
+    rating: '4,7',
+    amountRating: 230,
+  },
+  {
+    image: 'images/8_ 3196-690941664703139-1664703139 - Copy.png',
+    name: 'Figma UI UX Design Essentials',
+    author: 'Use Figma to get a job in UI Design, User Interface, User Experience design, UX Design & Web Design',
+    rootPrice: 500000,
+    rating: '4,8',
+    amountRating: 210,
+  },
+  {
+    image: 'images/9_42dadbfe747110c544fab569d954869c - Copy.jpg',
+    name: 'Adobe Illustrator CC – Advanced Training Course',
+    author: "In this Adobe Illustrator Advanced course we'll learn Advanced techniques for graphic design, logo design & illustration",
+    rootPrice: 480000,
+    rating: '4,6',
+    amountRating: 200,
+  }
+]
+    // Number of products per slide
+    const productsPerSlide = 4;
+
+
+    function createProductSlides(products) {
+  const carouselInner = document.getElementById('carouselInner');
+  const productsPerSlide = 3; // Display 3 products per slide
+  let slideHTML = '';
+
+  for (let i = 0; i < products.length; i += productsPerSlide) {
+    if (i === 0) {
+      slideHTML += '<div class="carousel-item active">';
+    } else {
+      slideHTML += '<div class="carousel-item">';
+    }
+
+    slideHTML += '<div class="row">';
+    for (let j = i; j < i + productsPerSlide && j < products.length; j++) {
+      slideHTML += `
+        <div class="col-4">
+          <div class="card">
+            <img src="${products[j].image}" class="card-img-top" alt="${products[j].name}">
+            <div class="card-body">
+              <h5 class="card-title">${products[j].name}</h5>
+              <p class="card-text">${products[j].description}</p>
+              <div class="d-flex align-items-center flex-wrap">
+                <span class="sell-price text-danger me-2">${products[j].sellPrice.toLocaleString()} đ</span>
+                <span class="root-price text-danger me-2"><s>${products[j].rootPrice.toLocaleString()} đ</s></span>
+                <span class="discount me-2" style="color: #6230A7; background-color: #E1DAFA; padding: 0 5px;">${products[j].discount}%</span>
+                <i class="fas fa-star text-warning"></i>
+                <span class="ms-1">${products[j].rating}</span>
+                <span class="ms-1 text-muted">(${products[j].amountRating})</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    slideHTML += '</div></div>';
+  }
+
+  carouselInner.innerHTML = slideHTML;
+}
+
+function createRecommendedSlides(productsRcm) {
+  const carouselRcmInner = document.getElementById('carouselRcmInner');
+  const productsPerSlide = 3; // Display 3 products per slide
+  let slideHTML = '';
+
+  for (let i = 0; i < productsRcm.length; i += productsPerSlide) {
+    if (i === 0) {
+      slideHTML += '<div class="carousel-item active">';
+    } else {
+      slideHTML += '<div class="carousel-item">';
+    }
+
+    slideHTML += '<div class="row">';
+    for (let j = i; j < i + productsPerSlide && j < productsRcm.length; j++) {
+      slideHTML += `
+        <div class="col-4">
+          <div class="card">
+            <img src="${productsRcm[j].image}" class="card-img-top" alt="${productsRcm[j].name}">
+            <div class="card-body">
+              <h5 class="rcm-card-title">${productsRcm[j].name}</h5>
+              <p class="rcm-card-author">${productsRcm[j].author}</p>
+              <div class="d-flex align-items-center flex-wrap">
+                <span class="rcm-root-price">${productsRcm[j].rootPrice.toLocaleString()} đ</span>
+                <div class="rcm-rating">
+                  <i class="fas fa-star"></i>
+                  <span>${productsRcm[j].rating}</span>
+                  <span class="text-muted">(${productsRcm[j].amountRating})</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    slideHTML += '</div></div>';
+  }
+
+  carouselRcmInner.innerHTML = slideHTML;
+}
+
+
+createProductSlides(products);
+createRecommendedSlides(productsRcm);
+
+
+    
+
+function prevSlide(carouselId) {
+  const carousel = document.getElementById(carouselId).parentElement;
+  const carouselInstance = new bootstrap.Carousel(carousel);
+  carouselInstance.prev();
+}
+
+function nextSlide(carouselId) {
+  const carousel = document.getElementById(carouselId).parentElement;
+  const carouselInstance = new bootstrap.Carousel(carousel);
+  carouselInstance.next();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const profileButton = document.querySelector('.profile-button');
+    const profileDropdownContainer = document.querySelector('.profile-dropdown-container');
+
+    profileButton.addEventListener('click', () => {
+        profileDropdownContainer.classList.toggle('show');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', (event) => {
+        if (!profileDropdownContainer.contains(event.target)) {
+            profileDropdownContainer.classList.remove('show');
+        }
+    });
+});
+
+document.getElementById('logout-button').addEventListener('click', function() {
+    window.location.href = 'main.html'; // Thay đổi URL đến trang mới
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Lấy tất cả các mục trong dropdown menu
+  var dropdownItems = document.querySelectorAll('#categoryDropdownMenu .dropdown-item');
+  
+  // Lấy tiêu đề của carousel
+  var carouselTitle = document.getElementById('carouselTitle');
+  var categoryDropdown = document.getElementById('categoryDropdown')
+  var carouselTitleRcm = document.getElementById('carouselTitleRcm')
+  
+  // Tiêu đề mặc định
+  var defaultTitle = 'KHÓA HỌC NỔI BẬT';
+  
+  // Thêm sự kiện click cho từng mục trong dropdown menu
+  dropdownItems.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      event.preventDefault(); // Ngăn không cho link chuyển hướng
+      var category = item.getAttribute('data-title'); // Lấy tiêu đề từ thuộc tính data-title
+      carouselTitle.textContent = `KHÓA HỌC ${category} NỔI BẬT`; // Cập nhật tiêu đề carousel
+      categoryDropdown.textContent = category; // Cập nhật tiêu đề carousel
+      carouselTitleRcm.textContent = `KHÓA HỌC ${category} ĐỀ CỬ`;
+    });
+  });
+
+  // Đặt tiêu đề mặc định khi trang tải
+  carouselTitle.textContent = defaultTitle;
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  
+  // Hiển thị nút khi cuộn xuống 200px và ẩn khi ở đầu trang
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.style.display = 'block';
+    } else {
+      scrollToTopBtn.style.display = 'none';
+    }
+  });
+
+  // Cuộn lên đầu trang khi nhấp vào nút
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Cuộn mượt mà
+    });
+  });
+});
+
+
+</script>
+</html>

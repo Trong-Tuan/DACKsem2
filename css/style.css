@@ -1,0 +1,880 @@
+/* Sidebar */
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 60px;
+    height: 100%;
+    width: 50px;
+    background-color: white;
+    transition: background-color 0.9s, width 0.3s;
+    z-index: 1000;
+    overflow: hidden; /* Ẩn nội dung vượt ra ngoài khi sidebar thu gọn */
+}
+
+.sidebar:hover {
+    width: 250px;
+    background-color: white;
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Đảm bảo độ rộng 100% để căn giữa */
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sidebar li {
+    padding: 15px;
+    display: flex;
+    padding-bottom: 10px;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    border-bottom: 2px solid #9c7ace; /* Đường phân cách */
+    width: 80%; /* Điều chỉnh độ rộng để đường kẻ ngắn hơn */
+    margin: 0 auto; /* Căn giữa đường kẻ trong thẻ li */
+    transition: background-color 0.3s; /* Thêm hiệu ứng chuyển màu nền */
+    justify-content: center;
+}
+
+.sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+}
+
+.sidebar ul li i {
+    margin-right: 10px; /* Khoảng cách giữa icon và text */
+}
+
+.sidebar ul li span {
+    display: none; /* Ẩn text khi sidebar thu gọn */
+}
+
+.sidebar:hover ul li span {
+    display: inline-block; /* Hiện text khi hover */
+}
+
+.sidebar ul li:hover {
+    background-color: rgb(185, 185, 185);
+}
+
+
+/* Thêm phần tử cho hover */
+.sidebar-hover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15px; /* Chiều rộng của phần hover */
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1100;
+}
+
+
+  .search-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Khoảng cách giữa các phần tử */
+    margin-left: 5rem;
+    position: relative; /* Đảm bảo container của nút dropdown có position relative */
+
+  }
+
+  .signin-button {
+    background-color: white;
+    color: black;
+    height: 40px; /* Chiều cao bằng với input */
+    border-radius: 10px;
+    border: none;
+    padding: 0 20px; /* Chỉnh lại padding để vừa chiều cao */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 18px;
+  }
+
+  .signin-button:hover {
+    background-color: #a5a5a5;
+    shape-outside: margin-box;
+  }
+  
+  .signup-button {
+    background-color: #7f45db;
+    color: white;
+    height: 40px; /* Chiều cao bằng với input */
+    border-radius: 10px;
+    border: none;
+    padding: 0 20px; /* Chỉnh lại padding để vừa chiều cao */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 18px;
+  }
+
+  .signup-button:hover {
+    background-color: #a5a5a5;
+  }
+
+  .language-dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column; /* Ensure items stack vertically */
+  width: 200px;
+  background-color: #f6f4ff;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  margin-top: 5px;
+  top: 50px;
+  right: 0px;
+  z-index: 2000;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.language-dropdown a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  width: 100%; /* Make links take full width */
+  text-align: center; /* Center text within links */
+  display: block;
+  border-bottom: 2px solid #9c7ace; /* Add border between items */
+}
+
+
+.language-dropdown a:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.language-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+.dropdown-menu {
+  display: none;
+  top: 53px;
+  z-index: 1000;
+  padding-top: 30px;
+  background-color: #f6f4ff;
+  width: 250px;
+  align-items: center; /* Căn giữa các item theo chiều ngang */
+  flex-direction: column; /* Đảm bảo các item sẽ xếp chồng lên nhau */
+  position: absolute;
+  border-radius: 0;
+  margin: 0 auto;
+}
+
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  border: #7f45db;
+  border-bottom: 2px solid #9c7ace; /* Add border between items */
+}
+
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+#bannerheader {
+  background-color: #EAE5FC; /* Màu nền của banner */
+  padding-bottom: 30px; /* Khoảng cách dưới cùng */
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 40px; /* Padding cho các cột nội dung */
+}
+
+.text-column {
+  flex: 1;
+  text-align: left; /* Căn trái văn bản */
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.text-column h1 {
+  font-size: 2rem;
+  color: #33195C;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.text-luck {
+  padding-top: 20px;
+  font-size: 1.4rem;
+  color: #33195C;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.text-column p {
+  color: #6230A7;
+  margin-bottom: 10px;
+}
+
+.image-column {
+  flex: 1;
+  text-align: right;
+}
+
+.image-column img {
+  width: 100%; /* Hoặc kích thước tùy chỉnh */
+  max-width: 450px; /* Kích thước tối đa của hình ảnh */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của hình ảnh */
+}
+
+.brand-column {
+  width: 100%; /* Hoặc kích thước tùy chỉnh */
+  max-width: 250px; /* Kích thước tối đa của hình ảnh */
+  height: auto; /* Đảm bảo tỷ lệ khung hình của hình ảnh */
+  padding-bottom: 40px;
+}
+    #bannerheader .search-container {
+      position: relative;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 74rem;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 5px;
+      z-index: 1;
+      max-width: 1270px;
+    }
+
+
+
+    #bannerheader .dropdown-toggle {
+      display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+      align-items: center; /* Căn giữa nội dung theo chiều dọc */
+      justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+      width: 150px; /* Kích thước của dropdown toggle, có thể thay đổi theo nhu cầu */
+      height: 40px; /* Chiều cao của dropdown toggle, có thể thay đổi theo nhu cầu */
+      color: #753AC7;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-weight: bold;
+      position: relative;
+      font-size: 1rem; /* Kích thước chữ, có thể điều chỉnh theo nhu cầu */
+    }
+
+    #bannerheader .dropdown {
+      border: none;
+      width: 250px; /* Kích thước của dropdown menu */
+      z-index: 1;
+      text-align: center; /* Căn giữa văn bản trong menu */
+      display: flex; /* Sử dụng flexbox để căn giữa các item */
+      flex-direction: column; /* Xếp các item theo cột */
+      position: relative; /* Để mũi tên có thể được đặt ở đúng vị trí bên trái */
+      display: inline-flex; /* Để có thể căn giữa nội dung */
+      align-items: center; /* Căn giữa nội dung theo chiều dọc */    }
+
+    #bannerheader .dropdown-menu {
+      border: none;
+      width: 250px;
+      position: absolute;
+      z-index: 1;
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center; /* Căn giữa các item theo chiều ngang */
+      flex-direction: column; /* Đảm bảo các item sẽ xếp chồng lên nhau */
+      position: absolute;
+    }
+
+    #bannerheader .search-input {
+      width: 70%;
+      border: none;
+      outline: none;
+      padding: 10px;
+    }
+
+    .search-button {
+      background-color: #7f45db;
+      color: white;
+      border: none;
+      padding: 0 15px;
+      border-radius: 30px;
+      font-weight: normal;
+      cursor: pointer;
+      height: 30px;
+      width: 120px;
+      margin: 10px;
+    }
+
+    #bannerheader .divider {
+      height: 40px;
+      width: 2px;
+      background-color: #753AC7;
+      margin: 0 10px;
+    }
+
+
+    
+    
+
+.nav-link {
+  color: #7f45db;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.nav-link:hover {
+  color: white; /* Change to your desired hover color */
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 80%; /* Set the carousel width */
+  max-width: 1200px; /* Set the maximum width of the carousel */
+  margin: 0 auto; /* Center the carousel */
+  padding-bottom: 30px;
+  padding-top: 30px;
+
+}
+
+.carousel-title {
+  margin-bottom: 20px; /* Space between the title and carousel */
+  position: relative;
+  left: 0; /* Align the title's left margin with the carousel's left margin */
+  width: 100%; /* Ensure the title is as wide as the carousel */
+  text-align: left; /* Align the title to the left */
+  padding-left: 0; /* Adjust the left padding */
+  color: #33195C;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.carousel {
+  width: 100%; /* Set the width of the carousel */
+  display: flex; /* Use flexbox to handle card layout */
+  gap: 12px; /* Space between each card */
+}
+
+.card {
+  margin: 0 auto; /* Center the card within the carousel-item */
+  height: max-content;
+  width: 100%; /* Adjust width to fit 3 cards per slide */
+  padding-right: 15px;
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+  border: none;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 30px;
+  font-size: 24px;
+}
+
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 50px; /* Set a fixed height for two lines of text */
+  width: 100%;
+  margin-bottom: 8px; /* Add spacing below the description */
+  font-size: 16px;
+}
+
+.card-img-top {
+  width: 100%; /* Ensure the image takes the full width of the card */
+  height: 300px; /* Adjust the image height for consistency */
+  object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
+.d-flex {
+  display: flex; /* Use flexbox for price and rating area */
+  flex-wrap: wrap; /* Allow wrapping to a new line if necessary */
+  margin-top: 10px; /* Add spacing above the price and rating area */
+  gap: 5px; /* Add spacing between elements */
+  align-items: center; /* Vertically center-align items */
+}
+
+.text-danger {
+  font-size: 1.2em; /* Make the sell price slightly larger */
+  font-weight: bold;
+}
+
+
+
+.discount {
+  color: #6230A7; /* Text color */
+  background-color: #E1DAFA; /* Background color */
+  padding-left: 4px; /* Padding for better appearance */
+  padding-right: 4px; /* Padding for better appearance */
+  border-radius: 4px; /* Rounded corners for the background */
+  font-size: 0.9em; /* Slightly smaller text */
+  font-weight: bolder;
+}
+
+.sell-price {
+  font-size: 1.4em; /* Ensure root price is smaller than the sell price */
+  color: red; /* Ensure the text is bright red */
+}
+
+.root-price {
+  text-decoration: line-through #000; /* Apply strikethrough to root price */
+  font-size: 0.8em; /* Ensure root price is smaller than the sell price */
+  color: red; /* Ensure the text is bright red */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px; /* Button width */
+  height: 50px; /* Button height */
+  border-radius: 50%; /* Create a circular shape */
+  background-color: #CBB8FA; /* Semi-transparent background */
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10; /* Ensure buttons appear above other elements */
+}
+
+.carousel-control-prev {
+  left: -75px; /* Position the Previous button to the left of the carousel */
+}
+
+.carousel-control-next {
+  right: -75px; /* Position the Next button to the right of the carousel */
+}
+
+/* Styles for productsRcm cards */
+.rcm-card-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit title to 2 lines */
+  -webkit-box-orient: vertical;
+  margin-bottom: 10px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.rcm-card-author {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+
+.rcm-root-price {
+  color: black;
+  margin-right: auto;
+  font-size: 1.4em; /* Ensure root price is smaller than the sell price */
+  font-weight: bolder;
+}
+
+.rcm-rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rcm-rating i {
+  color: #ffcc00; /* Star color */
+}
+
+.rcm-rating span {
+  margin-left: 5px;
+}
+
+
+.grid-wrapper {
+  margin: 20px auto; /* Center the grid and add margin */
+  width: 80%; /* Adjust width to fit your design */
+  max-width: 1200px; /* Maximum width */
+  padding-bottom: 50px; /* Space below the grid */
+}
+
+.grid-title {
+  margin-bottom: 20px; /* Space between title and grid */
+  text-align: left; /* Align title to the left */
+  color: #33195C; /* Use the same color as previous titles */
+  font-weight: bold; /* Bold title */
+}
+
+.grid-container {
+  display: grid; /* Use CSS grid for layout */
+  grid-template-columns:  repeat( 3, 1fr); /* 3 columns with equal width */
+  gap: 15px; /* Space between grid items */
+}
+
+.grid-item {
+  background-color: #F6F4FE; /* Background color for each grid item */
+  padding: 20px; /* Padding inside each grid item */
+  display: flex; /* Use flexbox to arrange content */
+  flex-direction: column; /* Stack image and text vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.grid-item:hover {
+  cursor: pointer;
+}
+
+.grid-item img {
+  max-width: 60%; /* Ensure image fits inside grid item */
+  max-height: 60%; /* Ensure image fits inside grid item */
+  object-fit: contain; /* Maintain aspect ratio and cover area */
+  transition: all .4s ease-in-out;
+}
+
+.grid-item img:hover {
+  transform: scale(1.1); /* Scale image on hover */
+}
+
+.grid-item-text {
+  flex: 2; /* Chiếm 2/5 chiều cao của item */
+  font-size: 1.4rem;
+  font-weight: bolder;
+  margin-top: 10px; /* Khoảng cách giữa hình ảnh và văn bản */
+  color: #33195C;
+  display: flex;
+  align-items: center; /* Căn giữa văn bản theo chiều dọc */
+  justify-content: center; /* Căn giữa văn bản theo chiều ngang */
+}
+
+#aboutUs {
+  position: relative;
+  text-align: center;
+  padding-bottom: 30px;
+  background-color: #EAE5FC;
+  height: max-content;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#aboutUs img {
+  width: 70%;
+  height: 70%;
+  justify-content: flex-start; /* Change to center or flex-end for different alignments */
+}
+
+.about-us-content {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between columns */
+  align-items: flex-start; /* Align items to the top */
+  max-width: 1200px; /* Optional: max width for content */
+  margin: 0 auto; /* Center content horizontally */
+  padding-top: 20px; /* Add some padding around content */
+  padding-right: 20px; /* Add some padding around content */
+  padding-bottom: 20px; /* Add some padding around content */
+
+  /* Remove any fixed height to allow content to determine height */
+}
+
+.about-us-left,
+.about-us-right {
+  flex: 1; /* Each column takes equal space */
+  padding: 10px; /* Add padding inside columns */
+  /* Ensure no fixed height here to allow dynamic height */
+}
+
+.about-us-title {
+  margin-bottom: 20px; /* Space between title and image */
+  text-align: left; /* Align title to the left */
+  color: #33195C; /* Use the same color as previous titles */
+  font-weight: bold; /* Bold title */
+}
+
+.about-us-left img {
+  width: 100%; /* Image fits within the column */
+  max-height: auto; /* Optional: set max height for image */
+  object-fit: cover; /* Maintain aspect ratio and cover area */
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.about-us-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Change to center or flex-end for different alignments */
+  padding: 10px;
+  align-self: flex-end;
+}
+
+.about-us-text {
+  margin-bottom: 20px;
+  color: #522989;
+  font-size: 24px;
+  text-align: left;
+  font-weight: bolder;
+}
+
+.about-us-subtext {
+  color: #522989;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+
+}
+
+
+#reviews {
+  margin: 40px auto;
+  width: 80%;
+  max-width: 1270px;
+}
+
+.review-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #33195C;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  height: 150px;
+  margin: 10px;
+  padding: 15px;
+  background-color: #EAE5FC;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-name {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #33195C;
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.review-rating i {
+  margin-right: 5px;
+  color: #33195C;
+}
+
+.review-rating span {
+  color: #33195C;
+}
+
+.review-comment {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #6230A7;
+}
+
+#suggestions {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  max-width: 1700px;
+  padding-top: 50px;
+}
+
+#suggestions:hover {
+  cursor: pointer;
+}
+
+.suggestion-card {
+  background-color: #F6F4FE;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1), 
+              0px -3px 1px rgba(98, 48, 167, 0.5) inset, 
+              0px 3px 1px rgba(234, 229, 252, 0.5) inset;
+}
+
+.suggestion-content {
+  display: flex;
+  align-items: center;
+}
+
+.suggestion-icon {
+  background-color: #EAE5FC;
+  border-radius: 50%;
+  padding: 15px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestion-icon i {
+  color: #6230A7;
+  font-size: 1.5rem;
+}
+
+.suggestion-text {
+  color: #6230A7;
+  font-size: 1rem;
+}
+
+
+#infoSection {
+  background-color: #EAE5FC;
+  padding: 30px 0;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#infoSection .container {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#infoSection .row {
+  gap: 30px; /* Khoảng cách giữa các cột */
+}
+
+#infoSection .d-flex {
+  display: flex;
+}
+
+#infoSection img {
+  margin-bottom: 10px;
+  max-width: 115px;
+  width: 100%; 
+  height: auto;
+}
+
+#infoSection p {
+  margin-bottom: 15px;
+  color: #6230A7;
+}
+
+#infoSection h4 {
+  color: #6230A7;
+  margin-bottom: 15px;
+}
+
+#infoSection ul {
+  padding-left: 0;
+}
+
+#infoSection ul li {
+  margin-bottom: 10px;
+}
+
+#infoSection ul li a {
+  text-decoration: none;
+  color: #6230A7;
+}
+
+#footer {
+  background-color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+#footer .container {
+  text-align: center; /* Căn giữa văn bản trong container */
+}
+
+#footer p {
+  color: #b096ef;
+  margin: 0; /* Loại bỏ margin mặc định */
+}
+
+
+/* CSS cho nút Scroll to Top */
+.scroll-to-top-btn {
+  position: fixed; /* Đặt nút ở vị trí cố định */
+  bottom: 20px; /* Cách đáy màn hình 20px */
+  right: 20px; /* Cách phải màn hình 20px */
+  background-color: #8045D9; /* Màu nền của nút */
+  color: white; /* Màu chữ và biểu tượng */
+  border: none; /* Xóa viền */
+  border-radius: 50%; /* Tạo hình tròn */
+  width: 50px; /* Chiều rộng */
+  height: 50px; /* Chiều cao */
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  font-size: 24px; /* Kích thước biểu tượng */
+  cursor: pointer; /* Thay đổi con trỏ khi hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng cho nút */
+  transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #6c33b6; /* Màu nền khi hover */
+  transform: scale(1.1); /* Tăng kích thước khi hover */
+}
